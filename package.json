@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^6.1.4",
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
     "aws-amplify": "^6.0.13",
     "next": "14.0.4",
     "react": "^18",
@@ -21,11 +23,14 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.18",
     "aws-cdk": "^2.124.0",
     "aws-cdk-lib": "^2.124.0",
     "constructs": "^10.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }
 }
