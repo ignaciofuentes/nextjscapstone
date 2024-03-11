@@ -37,14 +37,17 @@ export default function TodoList() {
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               onClick={async () => {
                 // create a new Todo with the following attributes
-                const { errors, data: newTodo } =
-                  await client.models.Todo.create({
-                    // prompt the user to enter the title
-                    content: window.prompt("title"),
-                    done: false,
-                    priority: "medium",
-                  });
-                console.log(errors, newTodo);
+                let title = window.prompt("title");
+                if (title != null) {
+                  const { errors, data: newTodo } =
+                    await client.models.Todo.create({
+                      // prompt the user to enter the title
+                      content: title,
+                      done: false,
+                      priority: "medium",
+                    });
+                  console.log(errors, newTodo);
+                }
               }}
             >
               Add new todo{" "}
