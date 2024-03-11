@@ -9,13 +9,7 @@ import type { Schema } from "@/amplify/data/resource";
 const client = generateClient<Schema>();
 
 export default function TodoList() {
-  const [todos, setTodos] = useState<Schema["Todo"][]>([]);
-
-  async function listTodos() {
-    // fetch all todos
-    const { data } = await client.models.Todo.list();
-    setTodos(data);
-  }
+  const [myTodos, setTodos] = useState<Schema["Todo"][]>([]);
 
   useEffect(() => {
     const sub = client.models.Todo.observeQuery().subscribe(({ items }) =>
@@ -55,7 +49,7 @@ export default function TodoList() {
           </div>
           <div>
             <ul className="list-reset">
-              {todos.map((todo) => (
+              {myTodos.map((todo) => (
                 <li
                   key={todo.id}
                   className="flex justify-between items-center bg-gray-100 rounded mb-2 p-2"
