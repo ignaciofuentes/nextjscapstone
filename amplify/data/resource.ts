@@ -7,6 +7,9 @@ specify that owners, authenticated via your Auth resource can "create",
 "read", "update", and "delete" their own records. Public users,
 authenticated via an API key, can only "read" records.
 =========================================================================*/
+
+// Create an Amplify v2 "Todo" schema that includes three items: content (string), done (boolean), and a priority with possible values 'low','medium', or 'high'.
+// Add authorization to allow the owner access to this schema
 const schema = a.schema({
   Todo: a
     .model({
@@ -19,6 +22,8 @@ const schema = a.schema({
 
 export type Schema = ClientSchema<typeof schema>;
 
+
+// Define a user pool authorization mode for the Amplify v2 schema with a 30 day expiration for the API key
 export const data = defineData({
   schema,
   authorizationModes: {
