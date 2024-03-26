@@ -1,11 +1,19 @@
 // app/page.tsx
 "use client";
 
+// import aws-amplify css styles for react
 import "@aws-amplify/ui-react/styles.css";
+
+// import signOut from aws-amplify/auth
 import { signOut } from "aws-amplify/auth";
 
+// import Fragment from react
 import { Fragment } from "react";
+
+// import Disclosure, Menu, Transition from @headlessui/react
 import { Disclosure, Menu, Transition } from "@headlessui/react";
+
+// import Bars3Icon, UserCircleIcon, XMarkIcon from @heroicons/react/24/outline
 import {
   Bars3Icon,
   UserCircleIcon,
