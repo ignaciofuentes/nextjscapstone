@@ -1,8 +1,13 @@
 // components/TodoList.tsx
 "use client";
 
+//Import the useState, useEffect from react
 import { useState, useEffect } from "react";
+
+//Import the generateClient function from the aws-amplify data folder
 import { generateClient } from "aws-amplify/data";
+
+//Import the schema function from the amplify resource data folder
 import type { Schema } from "@/amplify/data/resource";
 
 // generate your data client using the Schema from your backend
